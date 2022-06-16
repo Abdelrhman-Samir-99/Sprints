@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="2" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="11" time="205.023">
+    <testcase classname="F01_Register | users could register with new accounts" name="guest user could register with valid data successfully" time="34.249">
+        <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.result&quot;}&#10;  (Session info: chrome=102.0.5005.63)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.1.4', revision: '535d840ee2'&#10;System info: host: 'DESKTOP-3S986KV', ip: '192.168.1.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.1.1'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [a733383be7eda31b309ec1a9a128e9c9, findElement {using=class name, value=result}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.63, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\abdul\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58334}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58334/devtoo..., se:cdpVersion: 102.0.5005.63, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: a733383be7eda31b309ec1a9a128e9c9" type="org.openqa.selenium.NoSuchElementException"><![CDATA[Given user go to register page..............................................passed
+When user select gender type................................................passed
+And user enter first and last name..........................................passed
+And user enter date of birth................................................passed
+And user enter email........................................................passed
+And user enter company name.................................................passed
+And user enter password and validate it.....................................passed
+Then user click on register button and user see success message.............failed
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".result"}
+  (Session info: chrome=102.0.5005.63)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'DESKTOP-3S986KV', ip: '192.168.1.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.1.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a733383be7eda31b309ec1a9a128e9c9, findElement {using=class name, value=result}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.63, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\abdul\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58334}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58334/devtoo..., se:cdpVersion: 102.0.5005.63, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: a733383be7eda31b309ec1a9a128e9c9
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:385)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:377)
+	at Pages.P01_register.getRegisterResult(P01_register.java:58)
+	at stepDefinitions.D01_registerStepDef.click_on_registerBtn(D01_registerStepDef.java:83)
+	at ✽.user click on register button and user see success message(file:///C:/Users/abdul/Desktop/Work/Projects/UI-Testing/src/main/resources/features/F01_Register.feature:11)
+]]></failure>
+    </testcase>
+    <testcase classname="F02_Login | users could use login functionality to use their accounts" name="user login using valid email and password" time="19.486">
+        <system-out><![CDATA[Given user click on login button............................................passed
+And user enter valid email "abdulrhman.samir123@gmial.com" and password "123456".passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F03_Currency | user should be able to change currency" name="user could move between currency" time="19.277">
+        <system-out><![CDATA[When user select random currency............................................passed
+And all items show with Euro price..........................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F04_Search | user should be able to search product by different parameters" name="user search product by name" time="16.918">
+        <system-out><![CDATA[Given user could search using product name "Apple"..........................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F04_Search | user should be able to search product by different parameters" name="user search product by SKU (Serial Key Unit)" time="19.27">
+        <system-out><![CDATA[Given user search using sku "AP_MBP_13".....................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F05_hoverCategories | user could hover categories and select sub category" name="user could hover categories" time="18.999">
+        <system-out><![CDATA[When user hover category and select subcategory.............................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F06_homeSliders | users will be able to open sliders in home page" name="user see the Nokia Lumia 1020 slider" time="9.989">
+        <system-out><![CDATA[Given user clicked on a slide named "Nokia".................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F07_followUs | user could open follow us links for other social media" name="user redirect to Facebook" time="16.909">
+        <system-out><![CDATA[Given user clicks on Facebook icon..........................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F07_followUs | user could open follow us links for other social media" name="user redirect to Twitter" time="24.004">
+        <system-out><![CDATA[Given user clicks on Twitter icon...........................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F07_followUs | user could open follow us links for other social media" name="user redirect to RSS" time="0">
+        <failure message="The scenario has no steps" type="java.lang.Exception"/>
+    </testcase>
+    <testcase classname="F07_followUs | user could open follow us links for other social media" name="user redirect to YouTube" time="25.413">
+        <system-out><![CDATA[Given user clicks on YouTube icon...........................................passed
+]]></system-out>
+    </testcase>
+</testsuite>
